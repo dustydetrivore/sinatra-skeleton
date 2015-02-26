@@ -1,4 +1,4 @@
-class Review < ActiveRecord::Base
+class Backing < ActiveRecord::Base
 	belongs_to :project
 	belongs_to :user
 end
