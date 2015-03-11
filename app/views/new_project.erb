@@ -1,0 +1,65 @@
+<div class="row">
+	<div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1 box">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Post A New Project</h3>
+			</div>
+		</div>
+		<form method="POST" action="/projects/create" class="form-horizontal">
+			<div class="form-group">
+				<label for="name" class="col-sm-4 control-label">Project Name</label>
+				<div class="col-sm-8">
+					<input type="text" name="name" placeholder="Project Name" class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="creator" class="col-sm-4 control-label">Project Creator</label>
+				<div class="col-sm-8">
+					<input type="text" name="creator" placeholder="Project Creator" class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="category" class="col-sm-4 control-label">Project Category</label>
+				<div class="col-sm-8">
+					<select name="category" class="form-control">
+						<option>-Please select one-</option>
+						<option>Art</option>
+						<option>Comics</option>
+						<option>Crafts</option>
+						<option>Dance</option>
+						<option>Design</option>
+						<option>Fashion</option>
+						<option>Film & Video</option>
+						<option>Food</option>
+						<option>Games</option>
+						<option>Journalism</option>
+						<option>Music</option>
+						<option>Photography</option>
+						<option>Publishing</option>
+						<option>Technology</option>
+						<option>Theater</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="funding_goal" class="col-sm-4 control-label">Funding Goal</label>
+				<div class="input-group col-sm-8">
+					<div class="input-group-addon">$</div>
+					<input type="integer" name="funding_goal" placeholder="0" class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="funding_pledged" class="col-sm-4 control-label">Funding Pledged</label>
+				<div class="input-group col-sm-8">
+					<div class="input-group-addon">$</div>
+					<input type="integer" name="funding_pledged" placeholder="0" class="form-control">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-4 col-sm-offset-4">
+					<input type="submit" name="submit" value="Post Project" class="form-control submitbutton">
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

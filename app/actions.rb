@@ -50,3 +50,25 @@ end
 post '/profile' do
 	redirect '/'
 end
+
+get '/projects/new' do
+	erb :new_project
+end
+
+post '/projects/create' do
+	name = params[:name]
+	category = params[:category]
+	creator = params[:creator]
+	funding_goal = params[:funding_goal].to_i
+	funding_pledged = params[:funding_pledged].to_i
+	new_project = current_user.projects.create(name: name, category: category, funding_goal: funding_goal, funding_pledged: funding_pledged)
+	some_creator = Creator.find_by(name: creator)
+	new_project.creator = some_creator
+	new_project.save
+	redirect "/projects/#{new_project.id}"
+end
+
+get '/projects/:id' do
+	@project = Project.find(params[:id])
+	erb :project
+end
